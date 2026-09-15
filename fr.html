@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité – NRG</title>
+<link rel="alternate" hreflang="de" href="https://choney34.github.io/nrg-privacy/">
+<link rel="alternate" hreflang="en" href="https://choney34.github.io/nrg-privacy/en.html">
+<link rel="alternate" hreflang="fr" href="https://choney34.github.io/nrg-privacy/fr.html">
+<link rel="alternate" hreflang="it" href="https://choney34.github.io/nrg-privacy/it.html">
+<link rel="alternate" hreflang="es" href="https://choney34.github.io/nrg-privacy/es.html">
+<link rel="alternate" hreflang="pt" href="https://choney34.github.io/nrg-privacy/pt.html">
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         line-height: 1.6; max-width: 760px; margin: 0 auto; padding: 24px; }
+  h1 { font-size: 1.7rem; } h2 { font-size: 1.2rem; margin-top: 2rem; }
+  code { background: rgba(127,127,127,.18); padding: .1em .35em; border-radius: 4px; }
+  a { color: #0a7; }
+  .muted { opacity: .7; font-size: .9rem; }
+  .lang a { margin-right: .6rem; }
+  ul { padding-left: 1.2rem; }
+</style>
+</head>
+<body>
+<p class="lang muted"><a href="./">Deutsch</a> · <a href="en.html">English</a> · <strong>Français</strong> ·
+<a href="it.html">Italiano</a> · <a href="es.html">Español</a> · <a href="pt.html">Português</a></p>
+
+<h1>Politique de confidentialité de NRG</h1>
+<p class="muted">Dernière mise à jour : 15 septembre 2026</p>
+
+<p>La présente politique de confidentialité décrit la manière dont l'application <strong>NRG</strong>
+(« l'app », identifiant <code>dev.christianhoney.nrg</code>) traite vos données. Le responsable est
+Christian Honey (contact : <a href="mailto:christian.honey@gmail.com">christian.honey@gmail.com</a>).</p>
+
+<h2>En bref</h2>
+<ul>
+  <li>Il n'y a <strong>aucun compte utilisateur</strong>.</li>
+  <li>L'app ne collecte <strong>aucune donnée personnelle</strong> et n'utilise <strong>ni suivi, ni publicité,
+      ni outil d'analyse</strong>.</li>
+  <li>Tous les réglages restent <strong>en local sur votre appareil</strong>.</li>
+  <li>Votre position sert uniquement à récupérer les stations-service, bornes de recharge et prix – si
+      nécessaire, des coordonnées sont transmises aux fournisseurs de données concernés (voir ci-dessous).
+      Elle n'est pas enregistrée.</li>
+</ul>
+
+<h2>Données de localisation</h2>
+<p>L'app utilise votre position pour</p>
+<ul>
+  <li>trouver les stations-service et bornes de recharge à proximité,</li>
+  <li>planifier des itinéraires et afficher les stations le long du trajet,</li>
+  <li>si vous le souhaitez, vous avertir des prix bas pendant la conduite.</li>
+</ul>
+<p>Pour la fonction de notification, votre position peut également être traitée <strong>en arrière-plan</strong>
+tant que cette fonction est active. La position est traitée sur l'appareil et – selon le pays, sous forme de
+coordonnées ou d'une région qui en est déduite – envoyée aux fournisseurs de données mentionnés ci-dessous afin
+de récupérer les stations, bornes et prix à proximité. L'éditeur de l'app n'enregistre <strong>pas</strong>
+votre position. Vous pouvez révoquer l'accès à la localisation à tout moment dans les Réglages d'iOS.</p>
+
+<h2>Notifications</h2>
+<p>Les notifications de prix et d'itinéraire sont générées sous forme de <strong>notifications locales</strong>
+sur l'appareil. Aucune donnée n'est transmise à un serveur push.</p>
+
+<h2>Données stockées localement</h2>
+<p>Les réglages (p. ex. rayon de recherche par défaut, type de carburant, options de notification) ainsi
+qu'un cache temporaire des données de stations récemment récupérées sont stockés exclusivement sur votre
+appareil et ne sont pas transmis à des tiers.</p>
+
+<h2>Services tiers</h2>
+<p>Pour afficher les cartes, calculer les itinéraires et récupérer les données de stations, de bornes et de
+prix, l'app se connecte aux services suivants. Leurs propres politiques de confidentialité s'appliquent :</p>
+<ul>
+  <li><strong>Apple Plans / MapKit</strong> (cartes, géocodage, itinéraires, recherche d'adresses) –
+      <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></li>
+  <li><strong>Tankerkönig</strong> (prix des carburants Allemagne, données : MTS-K, CC BY 4.0) –
+      <a href="https://creativecommons.tankerkoenig.de">creativecommons.tankerkoenig.de</a></li>
+  <li><strong>E-Control</strong> (prix des carburants Autriche)</li>
+  <li><strong>data.economie.gouv.fr</strong> (prix des carburants France)</li>
+  <li><strong>Geoportal Gasolineras</strong>, Ministerio para la Transición Ecológica (prix des carburants Espagne)</li>
+  <li><strong>DGEG</strong> (prix des carburants Portugal)</li>
+  <li><strong>MIMIT</strong> (prix des carburants Italie)</li>
+  <li><strong>petrol.lu</strong> et <strong>OpenStreetMap / Overpass API</strong> (prix et emplacements Luxembourg)</li>
+  <li><strong>CRE</strong> (prix des carburants Mexique)</li>
+  <li><strong>Fuel Finder</strong> (prix des carburants Royaume-Uni) – récupérés via un serveur relais exploité
+      par l'éditeur de l'app sur Amazon Web Services (région de Londres), voir ci-dessous</li>
+  <li><strong>Open Charge Map</strong> et <strong>GoingElectric</strong> (bornes de recharge)</li>
+</ul>
+<p>Seules les informations nécessaires à la requête sont transmises (coordonnées ou région et rayon de
+recherche), sans identifiant personnel. Pour l'Italie, le Luxembourg et le Mexique, l'app télécharge des
+listes complètes et les filtre sur l'appareil – aucune position n'y est transmise. Comme pour toute connexion
+Internet, les serveurs contactés reçoivent techniquement votre adresse IP.</p>
+
+<h2>Serveur relais pour le Royaume-Uni</h2>
+<p>Pour les prix au Royaume-Uni, l'app envoie les coordonnées et le rayon de recherche à un serveur exploité
+par l'éditeur de l'app sur Amazon Web Services (région eu-west-2, Londres). Celui-ci récupère les données
+auprès de Fuel Finder et ne renvoie que les stations à proximité. Le serveur n'enregistre ni votre position ni
+votre adresse IP ; AWS ne traite les données de connexion que dans la mesure techniquement nécessaire à la
+fourniture du service (<a href="https://aws.amazon.com/privacy/">aws.amazon.com/privacy</a>). Ce serveur n'est
+sollicité que pour des positions au Royaume-Uni.</p>
+
+<h2>Demande d'évaluation</h2>
+<p>L'app peut occasionnellement demander une évaluation via la fonction standard d'Apple. Aucune donnée n'est
+alors transmise à l'éditeur de l'app.</p>
+
+<h2>Aucun partage / aucune vente</h2>
+<p>Aucune donnée n'est vendue ni partagée à des fins publicitaires ou de suivi.</p>
+
+<h2>Enfants</h2>
+<p>L'app ne s'adresse pas spécifiquement aux enfants et ne collecte pas sciemment de données concernant des
+enfants.</p>
+
+<h2>Modifications</h2>
+<p>Cette politique peut être mise à jour si nécessaire. Les modifications seront publiées sur cette page avec
+une nouvelle date.</p>
+
+<h2>Contact</h2>
+<p>Pour toute question relative à la confidentialité :
+<a href="mailto:christian.honey@gmail.com">christian.honey@gmail.com</a></p>
+</body>
+</html>

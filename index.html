@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Datenschutzrichtlinie – NRG</title>
+<link rel="alternate" hreflang="de" href="https://choney34.github.io/nrg-privacy/">
+<link rel="alternate" hreflang="en" href="https://choney34.github.io/nrg-privacy/en.html">
+<link rel="alternate" hreflang="fr" href="https://choney34.github.io/nrg-privacy/fr.html">
+<link rel="alternate" hreflang="it" href="https://choney34.github.io/nrg-privacy/it.html">
+<link rel="alternate" hreflang="es" href="https://choney34.github.io/nrg-privacy/es.html">
+<link rel="alternate" hreflang="pt" href="https://choney34.github.io/nrg-privacy/pt.html">
 <style>
   :root { color-scheme: light dark; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -12,12 +18,16 @@
   code { background: rgba(127,127,127,.18); padding: .1em .35em; border-radius: 4px; }
   a { color: #0a7; }
   .muted { opacity: .7; font-size: .9rem; }
+  .lang a { margin-right: .6rem; }
   ul { padding-left: 1.2rem; }
 </style>
 </head>
 <body>
+<p class="lang muted"><strong>Deutsch</strong> · <a href="en.html">English</a> · <a href="fr.html">Français</a> ·
+<a href="it.html">Italiano</a> · <a href="es.html">Español</a> · <a href="pt.html">Português</a></p>
+
 <h1>Datenschutzrichtlinie für NRG</h1>
-<p class="muted">Stand: 3. Juni 2026</p>
+<p class="muted">Stand: 15. September 2026</p>
 
 <p>Diese Datenschutzrichtlinie beschreibt, wie die App <strong>NRG</strong> („die App", Bundle-ID
 <code>dev.christianhoney.nrg</code>) mit deinen Daten umgeht. Verantwortlich ist Christian Honey
@@ -25,12 +35,12 @@
 
 <h2>Kurzfassung</h2>
 <ul>
-  <li>Es gibt <strong>kein Nutzerkonto</strong> und <strong>keinen vom Anbieter betriebenen Server</strong>.</li>
+  <li>Es gibt <strong>kein Nutzerkonto</strong>.</li>
   <li>Die App sammelt <strong>keine personenbezogenen Daten</strong>, verwendet <strong>kein Tracking,
       keine Werbung und keine Analyse-Tools</strong>.</li>
   <li>Alle Einstellungen bleiben <strong>lokal auf deinem Gerät</strong>.</li>
-  <li>Dein Standort wird nur verwendet, um Tankstellen/Ladepunkte und Preise abzurufen – die Koordinaten
-      werden dafür an die jeweiligen Datenanbieter (siehe unten) übermittelt.</li>
+  <li>Dein Standort wird nur verwendet, um Tankstellen/Ladepunkte und Preise abzurufen – soweit nötig werden
+      dafür Koordinaten an die jeweiligen Datenanbieter (siehe unten) übermittelt. Gespeichert wird er nicht.</li>
 </ul>
 
 <h2>Standortdaten</h2>
@@ -41,10 +51,10 @@
   <li>auf Wunsch während der Fahrt über günstige Preise zu benachrichtigen.</li>
 </ul>
 <p>Für die Benachrichtigungsfunktion kann der Standort auch <strong>im Hintergrund</strong> verarbeitet
-werden, solange diese Funktion aktiv ist. Der Standort wird ausschließlich auf dem Gerät verarbeitet und –
-in Form von Koordinaten – an die unten genannten Datenanbieter gesendet, um die jeweils nahen Tankstellen,
-Ladepunkte und Preise abzurufen. Der Anbieter der App speichert deinen Standort <strong>nicht</strong>.
-Du kannst den Standortzugriff jederzeit in den iOS-Einstellungen widerrufen.</p>
+werden, solange diese Funktion aktiv ist. Der Standort wird auf dem Gerät verarbeitet und – je nach Land in
+Form von Koordinaten oder einer daraus abgeleiteten Region – an die unten genannten Datenanbieter gesendet,
+um die jeweils nahen Tankstellen, Ladepunkte und Preise abzurufen. Der Anbieter der App speichert deinen
+Standort <strong>nicht</strong>. Du kannst den Standortzugriff jederzeit in den iOS-Einstellungen widerrufen.</p>
 
 <h2>Mitteilungen / Benachrichtigungen</h2>
 <p>Preis- und Routen-Benachrichtigungen werden als <strong>lokale Benachrichtigungen</strong> auf dem Gerät
@@ -57,21 +67,40 @@ Gerät gespeichert und nicht an Dritte übertragen.</p>
 
 <h2>Drittanbieter-Dienste</h2>
 <p>Zur Anzeige von Karten, zur Routenberechnung sowie zum Abruf von Tankstellen-, Ladepunkt- und Preisdaten
-werden Koordinaten an folgende Dienste übermittelt. Für deren Verarbeitung gelten die jeweils eigenen
+verbindet sich die App mit folgenden Diensten. Für deren Verarbeitung gelten die jeweils eigenen
 Datenschutzbestimmungen:</p>
 <ul>
   <li><strong>Apple Maps / MapKit</strong> (Karten, Geokodierung, Routen, Adresssuche) –
       <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></li>
   <li><strong>Tankerkönig</strong> (Kraftstoffpreise Deutschland, Daten: MTS-K, CC BY 4.0) –
       <a href="https://creativecommons.tankerkoenig.de">creativecommons.tankerkoenig.de</a></li>
+  <li><strong>E-Control</strong> (Kraftstoffpreise Österreich)</li>
   <li><strong>data.economie.gouv.fr</strong> (Kraftstoffpreise Frankreich)</li>
-  <li><strong>Geoportal Gasolineras</strong> (Kraftstoffpreise Spanien)</li>
+  <li><strong>Geoportal Gasolineras</strong>, Ministerio para la Transición Ecológica (Kraftstoffpreise Spanien)</li>
   <li><strong>DGEG</strong> (Kraftstoffpreise Portugal)</li>
+  <li><strong>MIMIT</strong> (Kraftstoffpreise Italien)</li>
+  <li><strong>petrol.lu</strong> und <strong>OpenStreetMap / Overpass API</strong> (Preise und Standorte Luxemburg)</li>
+  <li><strong>CRE</strong> (Kraftstoffpreise Mexiko)</li>
+  <li><strong>Fuel Finder</strong> (Kraftstoffpreise Vereinigtes Königreich) – abgerufen über einen vom
+      App-Anbieter betriebenen Vermittlungsserver bei Amazon Web Services (Region London), siehe unten</li>
   <li><strong>Open Charge Map</strong> und <strong>GoingElectric</strong> (Ladepunkte/Strom)</li>
-  <li><strong>HERE</strong> (Ladepunkte entlang der Route)</li>
 </ul>
-<p>An diese Dienste werden nur die für die Abfrage nötigen Standortkoordinaten übermittelt, keine
-personenbezogenen Kennungen.</p>
+<p>Übermittelt werden nur die für die Abfrage nötigen Angaben (Standortkoordinaten bzw. Region und
+Suchradius), keine personenbezogenen Kennungen. Für Italien, Luxemburg und Mexiko lädt die App Gesamtlisten
+und filtert sie auf dem Gerät – dort wird kein Standort übermittelt. Wie bei jeder Internetverbindung
+erhalten die angefragten Server technisch bedingt deine IP-Adresse.</p>
+
+<h2>Vermittlungsserver für das Vereinigte Königreich</h2>
+<p>Für Preise im Vereinigten Königreich sendet die App Koordinaten und Suchradius an einen vom App-Anbieter
+betriebenen Server bei Amazon Web Services (Region eu-west-2, London). Dieser ruft die Daten bei Fuel Finder
+ab und gibt nur die Tankstellen in der Nähe zurück. Der Server speichert weder deinen Standort noch deine
+IP-Adresse; AWS verarbeitet Verbindungsdaten nur technisch bedingt zur Bereitstellung des Dienstes
+(<a href="https://aws.amazon.com/privacy/">aws.amazon.com/privacy</a>). Dieser Server wird nur bei Standorten
+im Vereinigten Königreich angefragt.</p>
+
+<h2>Bewertungsanfrage</h2>
+<p>Die App kann über die Apple-Standardfunktion gelegentlich um eine Bewertung bitten. Dabei werden keine
+Daten an den App-Anbieter übertragen.</p>
 
 <h2>Keine Weitergabe / kein Verkauf</h2>
 <p>Es werden keine Daten verkauft oder zu Werbe- bzw. Tracking-Zwecken weitergegeben.</p>
