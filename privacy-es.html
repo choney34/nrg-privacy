@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad – NRG</title>
+<link rel="alternate" hreflang="de" href="https://nrg-app.com/privacy.html">
+<link rel="alternate" hreflang="en" href="https://nrg-app.com/privacy-en.html">
+<link rel="alternate" hreflang="fr" href="https://nrg-app.com/privacy-fr.html">
+<link rel="alternate" hreflang="it" href="https://nrg-app.com/privacy-it.html">
+<link rel="alternate" hreflang="es" href="https://nrg-app.com/privacy-es.html">
+<link rel="alternate" hreflang="pt" href="https://nrg-app.com/privacy-pt.html">
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         line-height: 1.6; max-width: 760px; margin: 0 auto; padding: 24px; }
+  h1 { font-size: 1.7rem; } h2 { font-size: 1.2rem; margin-top: 2rem; }
+  code { background: rgba(127,127,127,.18); padding: .1em .35em; border-radius: 4px; }
+  a { color: #0a7; }
+  .muted { opacity: .7; font-size: .9rem; }
+  .lang a { margin-right: .6rem; }
+  ul { padding-left: 1.2rem; }
+</style>
+</head>
+<body>
+<p class="lang muted"><a href="privacy.html">Deutsch</a> · <a href="privacy-en.html">English</a> · <a href="privacy-fr.html">Français</a> ·
+<a href="privacy-it.html">Italiano</a> · <strong>Español</strong> · <a href="privacy-pt.html">Português</a></p>
+
+<h1>Política de privacidad de NRG</h1>
+<p class="muted">Última actualización: 15 de septiembre de 2026</p>
+
+<p>Esta política de privacidad describe cómo la app <strong>NRG</strong> («la app», bundle ID
+<code>dev.christianhoney.nrg</code>) trata tus datos. El responsable es Christian Honey
+(contacto: <a href="mailto:support@nrg-app.com">support@nrg-app.com</a>).</p>
+
+<h2>Resumen</h2>
+<ul>
+  <li>No hay <strong>ninguna cuenta de usuario</strong>.</li>
+  <li>La app no recopila <strong>ningún dato personal</strong> y no utiliza <strong>seguimiento, publicidad
+      ni herramientas de análisis</strong>.</li>
+  <li>Todos los ajustes se quedan <strong>localmente en tu dispositivo</strong>.</li>
+  <li>Tu ubicación solo se usa para obtener gasolineras, puntos de recarga y precios – cuando es necesario,
+      se envían coordenadas a los proveedores de datos correspondientes (ver más abajo). No se almacena.</li>
+</ul>
+
+<h2>Datos de ubicación</h2>
+<p>La app utiliza tu ubicación para</p>
+<ul>
+  <li>encontrar gasolineras y puntos de recarga cercanos,</li>
+  <li>planificar rutas y mostrar gasolineras a lo largo del trayecto,</li>
+  <li>si lo deseas, avisarte de precios bajos mientras conduces.</li>
+</ul>
+<p>Para la función de avisos, la ubicación también puede procesarse <strong>en segundo plano</strong> mientras
+esta función esté activa. La ubicación se procesa en el dispositivo y – según el país, en forma de coordenadas
+o de una región derivada de ellas – se envía a los proveedores de datos indicados abajo para obtener
+gasolineras, puntos de recarga y precios cercanos. El proveedor de la app <strong>no</strong> almacena tu
+ubicación. Puedes revocar el acceso a la ubicación en cualquier momento en los Ajustes de iOS.</p>
+
+<h2>Notificaciones</h2>
+<p>Las notificaciones de precios y rutas se generan como <strong>notificaciones locales</strong> en el
+dispositivo. No se transmite ningún dato a un servidor push.</p>
+
+<h2>Datos almacenados localmente</h2>
+<p>Los ajustes (p. ej. radio de búsqueda predeterminado, tipo de combustible, opciones de notificación) y una
+caché temporal de los datos de gasolineras obtenidos recientemente se almacenan exclusivamente en tu
+dispositivo y no se transmiten a terceros.</p>
+
+<h2>Servicios de terceros</h2>
+<p>Para mostrar mapas, calcular rutas y obtener datos de gasolineras, puntos de recarga y precios, la app se
+conecta a los siguientes servicios. A su tratamiento se aplican sus propias políticas de privacidad:</p>
+<ul>
+  <li><strong>Apple Mapas / MapKit</strong> (mapas, geocodificación, rutas, búsqueda de direcciones) –
+      <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></li>
+  <li><strong>Tankerkönig</strong> (precios de combustible Alemania, datos: MTS-K, CC BY 4.0) –
+      <a href="https://creativecommons.tankerkoenig.de">creativecommons.tankerkoenig.de</a></li>
+  <li><strong>E-Control</strong> (precios de combustible Austria)</li>
+  <li><strong>data.economie.gouv.fr</strong> (precios de combustible Francia)</li>
+  <li><strong>Geoportal Gasolineras</strong>, Ministerio para la Transición Ecológica (precios de combustible España)</li>
+  <li><strong>DGEG</strong> (precios de combustible Portugal)</li>
+  <li><strong>MIMIT</strong> (precios de combustible Italia)</li>
+  <li><strong>petrol.lu</strong> y <strong>OpenStreetMap / Overpass API</strong> (precios y ubicaciones Luxemburgo)</li>
+  <li><strong>CRE</strong> (precios de combustible México)</li>
+  <li><strong>Fuel Finder</strong> (precios de combustible Reino Unido) – obtenidos a través de un servidor
+      intermediario operado por el proveedor de la app en Amazon Web Services (región de Londres), ver más abajo</li>
+  <li><strong>Open Charge Map</strong> y <strong>GoingElectric</strong> (puntos de recarga)</li>
+</ul>
+<p>Solo se transmite la información necesaria para la consulta (coordenadas o región y radio de búsqueda),
+sin identificadores personales. Para Italia, Luxemburgo y México la app descarga listas completas y las filtra
+en el dispositivo – en esos casos no se transmite ninguna ubicación. Como en cualquier conexión a Internet, los
+servidores consultados reciben por motivos técnicos tu dirección IP.</p>
+
+<h2>Servidor intermediario para el Reino Unido</h2>
+<p>Para los precios en el Reino Unido, la app envía coordenadas y radio de búsqueda a un servidor operado por
+el proveedor de la app en Amazon Web Services (región eu-west-2, Londres). Este obtiene los datos de Fuel
+Finder y devuelve solo las gasolineras cercanas. El servidor no almacena ni tu ubicación ni tu dirección IP;
+AWS trata los datos de conexión solo en la medida técnicamente necesaria para prestar el servicio
+(<a href="https://aws.amazon.com/privacy/">aws.amazon.com/privacy</a>). Este servidor solo se consulta para
+ubicaciones en el Reino Unido.</p>
+
+<h2>Solicitud de valoración</h2>
+<p>La app puede pedir ocasionalmente una valoración mediante la función estándar de Apple. En ese proceso no
+se transmite ningún dato al proveedor de la app.</p>
+
+<h2>Sin cesión / sin venta</h2>
+<p>No se venden ni se ceden datos con fines publicitarios o de seguimiento.</p>
+
+<h2>Menores</h2>
+<p>La app no está dirigida específicamente a menores y no recopila conscientemente datos de menores.</p>
+
+<h2>Cambios</h2>
+<p>Esta política puede actualizarse cuando sea necesario. Los cambios se publicarán en esta página con una
+nueva fecha.</p>
+
+<h2>Contacto</h2>
+<p>Para preguntas sobre privacidad: <a href="mailto:support@nrg-app.com">support@nrg-app.com</a></p>
+</body>
+</html>
