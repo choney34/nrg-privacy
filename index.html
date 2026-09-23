@@ -3,116 +3,232 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Datenschutzrichtlinie – NRG</title>
-<link rel="alternate" hreflang="de" href="https://choney34.github.io/nrg-privacy/">
-<link rel="alternate" hreflang="en" href="https://choney34.github.io/nrg-privacy/en.html">
-<link rel="alternate" hreflang="fr" href="https://choney34.github.io/nrg-privacy/fr.html">
-<link rel="alternate" hreflang="it" href="https://choney34.github.io/nrg-privacy/it.html">
-<link rel="alternate" hreflang="es" href="https://choney34.github.io/nrg-privacy/es.html">
-<link rel="alternate" hreflang="pt" href="https://choney34.github.io/nrg-privacy/pt.html">
+<title>NRG – Günstig tanken in Europa</title>
+<meta name="description" content="NRG findet die günstigsten Tankstellen und Ladepunkte – in deiner Nähe und entlang deiner Route. Live-Preise aus offiziellen Quellen in neun Ländern.">
+<link rel="icon" href="img/icon.png">
+<meta property="og:title" content="NRG – Günstig tanken in Europa">
+<meta property="og:description" content="Live-Spritpreise: günstig tanken und laden, in der Nähe und entlang der Route.">
+<meta property="og:image" content="https://nrg-app.com/img/icon.png">
+<meta property="og:url" content="https://nrg-app.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="de" href="https://nrg-app.com/">
+<link rel="alternate" hreflang="en" href="https://nrg-app.com/en.html">
+<link rel="alternate" hreflang="fr" href="https://nrg-app.com/fr.html">
+<link rel="alternate" hreflang="it" href="https://nrg-app.com/it.html">
+<link rel="alternate" hreflang="es" href="https://nrg-app.com/es.html">
+<link rel="alternate" hreflang="pt" href="https://nrg-app.com/pt.html">
 <style>
-  :root { color-scheme: light dark; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-         line-height: 1.6; max-width: 760px; margin: 0 auto; padding: 24px; }
-  h1 { font-size: 1.7rem; } h2 { font-size: 1.2rem; margin-top: 2rem; }
-  code { background: rgba(127,127,127,.18); padding: .1em .35em; border-radius: 4px; }
-  a { color: #0a7; }
-  .muted { opacity: .7; font-size: .9rem; }
-  .lang a { margin-right: .6rem; }
-  ul { padding-left: 1.2rem; }
+  :root{
+    --bg:#0b1628; --bg2:#152744; --fg:#f2f6fc; --muted:#a3b4cd;
+    --orange:#ffa800; --green:#31c06a;
+    --card:rgba(255,255,255,.055); --line:rgba(255,255,255,.12);
+    --radius:16px; --maxw:1060px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;color:var(--fg);background:var(--bg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+  /* Kopfleiste */
+  nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);
+    background:rgba(11,22,40,.78);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:14px;height:62px}
+  nav img{width:30px;height:30px;border-radius:8px}
+  nav .name{font-weight:700;letter-spacing:.2px}
+  nav .spacer{flex:1}
+  nav a.link{color:var(--muted);text-decoration:none;font-size:.94rem}
+  nav a.link:hover{color:var(--fg)}
+  .lang{font-size:.9rem;color:var(--muted)}
+  .lang a{color:var(--muted);text-decoration:none}
+  .lang a:hover{color:var(--fg)}
+
+  /* Kopfbereich */
+  .hero{position:relative;overflow:hidden;
+    background:radial-gradient(1100px 420px at 50% -120px,rgba(255,168,0,.20),transparent 62%),
+               linear-gradient(180deg,var(--bg),var(--bg2));
+    border-bottom:1px solid var(--line)}
+  .hero .wrap{padding-top:72px;padding-bottom:64px;text-align:center}
+  .hero img.icon{width:104px;height:104px;border-radius:24px;box-shadow:0 18px 44px rgba(0,0,0,.45)}
+  h1{font-size:clamp(2.1rem,5vw,3.1rem);margin:22px 0 4px;letter-spacing:-1px;line-height:1.1}
+  .tagline{color:var(--orange);font-size:clamp(1.05rem,2.4vw,1.35rem);font-weight:650;margin:0}
+  .lead{color:var(--muted);max-width:620px;margin:16px auto 0;font-size:1.05rem}
+  .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:12px;
+    text-decoration:none;font-weight:650;background:var(--orange);color:#231704;
+    transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 10px 26px rgba(255,168,0,.22)}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line);box-shadow:none}
+  .btn.soon{opacity:.62;cursor:default;transform:none!important}
+  .btn svg{width:18px;height:18px;fill:currentColor}
+  .note{color:var(--muted);font-size:.85rem;margin-top:14px}
+
+  /* Screenshots */
+  .shots{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin:-34px auto 0;
+    padding-bottom:10px;position:relative;z-index:2}
+  .shots figure{margin:0;width:250px}
+  .shots img{width:100%;border-radius:18px;border:1px solid var(--line);
+    box-shadow:0 22px 50px rgba(0,0,0,.5);display:block}
+  .shots figcaption{color:var(--muted);font-size:.88rem;text-align:center;margin-top:12px}
+
+  /* Abschnitte */
+  section{padding:66px 0}
+  section h2{font-size:clamp(1.4rem,3vw,1.9rem);margin:0 0 8px;letter-spacing:-.4px}
+  section .sub{color:var(--muted);margin:0 0 30px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .card .ico{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+    background:rgba(255,168,0,.14);margin-bottom:12px}
+  .card .ico svg{width:20px;height:20px;stroke:var(--orange);fill:none;stroke-width:1.9;
+    stroke-linecap:round;stroke-linejoin:round}
+  .card h3{margin:0 0 6px;font-size:1.06rem}
+  .card p{margin:0;color:var(--muted);font-size:.96rem}
+  .alt{background:linear-gradient(180deg,transparent,rgba(255,255,255,.03),transparent)}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+  .chip{background:var(--card);border:1px solid var(--line);border-radius:999px;
+    padding:8px 15px;font-size:.94rem}
+  .sources{color:var(--muted);font-size:.93rem;max-width:840px}
+
+  footer{border-top:1px solid var(--line);padding:34px 0 46px;color:var(--muted);font-size:.92rem}
+  footer .links{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:12px}
+  footer a{color:var(--fg);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  @media (max-width:560px){ .hero .wrap{padding-top:48px} nav a.link{display:none} }
 </style>
 </head>
 <body>
-<p class="lang muted"><strong>Deutsch</strong> · <a href="en.html">English</a> · <a href="fr.html">Français</a> ·
-<a href="it.html">Italiano</a> · <a href="es.html">Español</a> · <a href="pt.html">Português</a></p>
 
-<h1>Datenschutzrichtlinie für NRG</h1>
-<p class="muted">Stand: 15. September 2026</p>
+<nav>
+  <div class="wrap">
+    <img src="img/icon.png" alt="">
+    <span class="name">NRG</span>
+    <span class="spacer"></span>
+    <a class="link" href="#funktionen">Funktionen</a>
+    <a class="link" href="#laender">Länder</a>
+    <a class="link" href="support.html">Support</a>
+    <span class="lang"><strong>DE</strong> · <a href="en.html">EN</a> · <a href="fr.html">FR</a> · <a href="it.html">IT</a> · <a href="es.html">ES</a> · <a href="pt.html">PT</a></span>
+  </div>
+</nav>
 
-<p>Diese Datenschutzrichtlinie beschreibt, wie die App <strong>NRG</strong> („die App", Bundle-ID
-<code>dev.christianhoney.nrg</code>) mit deinen Daten umgeht. Verantwortlich ist Christian Honey
-(Kontakt: <a href="mailto:christian.honey@gmail.com">christian.honey@gmail.com</a>).</p>
+<header class="hero">
+  <div class="wrap">
+    <img class="icon" src="img/icon.png" alt="NRG App-Symbol">
+    <h1>Nie wieder zu teuer tanken</h1>
+    <p class="tagline">Günstig tanken in Europa</p>
+    <p class="lead">NRG zeigt dir die günstigsten Tankstellen und Ladepunkte – in deiner Umgebung
+    und entlang deiner Route. Mit Live-Preisen aus offiziellen Quellen in neun Ländern.</p>
+    <div class="cta">
+      <a class="btn" href="https://apps.apple.com/de/app/nrg-g%C3%BCnstig-tanken-in-europa/id6774231622">
+        <svg viewBox="0 0 24 24"><path d="M17 12.5c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.5-.2-2.8.8-3.5.8-.7 0-1.8-.8-3-.8-1.6 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.7 0 0-2.5-.9-2.5-3.6zM14.6 5.3c.6-.8 1.1-1.9 1-3-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.8-1 2.9 1.1 0 2.3-.6 2.9-1.4z"/></svg>
+        App Store
+      </a>
+      <span class="btn ghost soon">
+        <svg viewBox="0 0 24 24"><path d="M3.6 2.2c-.3.3-.5.8-.5 1.4v16.8c0 .6.2 1.1.5 1.4l.1.1 9.4-9.4v-.2L3.6 2.2zM17 16.1l-3.1-3.1.1-.1 3-3 3.7 2.1c1.1.6 1.1 1.6 0 2.2L17 16.1zM13.9 12.9l-9.3 9.3c.4.4 1 .4 1.6.1l11-6.2-3.3-3.2zM13.9 11.1 17.2 8 6.2 1.8c-.6-.4-1.2-.3-1.6.1l9.3 9.2z"/></svg>
+        In Testing — Coming Soon!
+      </span>
+    </div>
+    <p class="note">Für iPhone, iPad und Android. Keine Werbung, kein Nutzerkonto, kein Tracking.</p>
+  </div>
+</header>
 
-<h2>Kurzfassung</h2>
-<ul>
-  <li>Es gibt <strong>kein Nutzerkonto</strong>.</li>
-  <li>Die App sammelt <strong>keine personenbezogenen Daten</strong>, verwendet <strong>kein Tracking,
-      keine Werbung und keine Analyse-Tools</strong>.</li>
-  <li>Alle Einstellungen bleiben <strong>lokal auf deinem Gerät</strong>.</li>
-  <li>Dein Standort wird nur verwendet, um Tankstellen/Ladepunkte und Preise abzurufen – soweit nötig werden
-      dafür Koordinaten an die jeweiligen Datenanbieter (siehe unten) übermittelt. Gespeichert wird er nicht.</li>
-</ul>
+<div class="shots wrap">
+  <figure>
+    <img src="img/shot-nearby.png" alt="Karte mit Tankstellen und Preisen in der Umgebung">
+    <figcaption>Preise direkt auf der Karte</figcaption>
+  </figure>
+  <figure>
+    <img src="img/shot-route.png" alt="Route mit Tankstellen entlang des Wegs">
+    <figcaption>Tankstellen entlang der Route</figcaption>
+  </figure>
+  <figure>
+    <img src="img/shot-detail.png" alt="Detailansicht einer Tankstelle mit allen Preisen">
+    <figcaption>Alle Preise einer Station</figcaption>
+  </figure>
+</div>
 
-<h2>Standortdaten</h2>
-<p>Die App nutzt deinen Standort, um</p>
-<ul>
-  <li>Tankstellen und Ladepunkte in deiner Umgebung zu finden,</li>
-  <li>Routen zu planen und Tankstellen entlang der Route anzuzeigen,</li>
-  <li>auf Wunsch während der Fahrt über günstige Preise zu benachrichtigen.</li>
-</ul>
-<p>Für die Benachrichtigungsfunktion kann der Standort auch <strong>im Hintergrund</strong> verarbeitet
-werden, solange diese Funktion aktiv ist. Der Standort wird auf dem Gerät verarbeitet und – je nach Land in
-Form von Koordinaten oder einer daraus abgeleiteten Region – an die unten genannten Datenanbieter gesendet,
-um die jeweils nahen Tankstellen, Ladepunkte und Preise abzurufen. Der Anbieter der App speichert deinen
-Standort <strong>nicht</strong>. Du kannst den Standortzugriff jederzeit in den iOS-Einstellungen widerrufen.</p>
+<section id="funktionen">
+  <div class="wrap">
+    <h2>Was NRG kann</h2>
+    <p class="sub">Alles, was du zum Tanken brauchst – und nichts darüber hinaus.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z"/></svg></div>
+        <h3>Umkreis-Suche</h3>
+        <p>Alle Stationen in deinem Radius, farbig nach Preis. Die günstigste trägt eine Krone.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 19l6-14 4 9 6-4"/></svg></div>
+        <h3>Route planen</h3>
+        <p>Start und Ziel eingeben und jede Station entlang des Wegs sehen. Wie weit sie abseits
+        liegen darf, bestimmst du selbst.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9z"/><path d="M10 21h4"/></svg></div>
+        <h3>Hinweis unterwegs</h3>
+        <p>Auf Wunsch meldet sich NRG während der Fahrt, wenn vor dir eine günstige Station liegt.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
+        <h3>Diesel, Benzin, Strom</h3>
+        <p>Diesel, Super E5 und E10 sowie Ladepunkte europaweit, mit Leistung und Steckertyp.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg></div>
+        <h3>Keine Datensammlung</h3>
+        <p>Kein Konto, keine Werbung, keine Analyse-Werkzeuge. Einstellungen bleiben auf dem Gerät.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M5 17h14l-1.5-5.5A3 3 0 0014.6 9H9.4a3 3 0 00-2.9 2.5L5 17z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></div>
+        <h3>CarPlay</h3>
+        <p>Auf dem iPhone zeigt NRG die günstigsten Stationen auch auf dem Bildschirm im Auto.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h2>Mitteilungen / Benachrichtigungen</h2>
-<p>Preis- und Routen-Benachrichtigungen werden als <strong>lokale Benachrichtigungen</strong> auf dem Gerät
-erzeugt. Es werden keine Daten an einen Push-Server übertragen.</p>
+<section id="laender" class="alt">
+  <div class="wrap">
+    <h2>Länder mit Kraftstoffpreisen</h2>
+    <p class="sub">Preise je Tankstelle aus amtlichen Quellen. Ladepunkte gibt es europaweit.</p>
+    <div class="chips">
+      <span class="chip">🇩🇪 Deutschland</span>
+      <span class="chip">🇦🇹 Österreich</span>
+      <span class="chip">🇫🇷 Frankreich</span>
+      <span class="chip">🇮🇹 Italien</span>
+      <span class="chip">🇪🇸 Spanien</span>
+      <span class="chip">🇵🇹 Portugal</span>
+      <span class="chip">🇱🇺 Luxemburg</span>
+      <span class="chip">🇬🇧 Großbritannien</span>
+      <span class="chip">🇲🇽 Mexiko</span>
+    </div>
+  </div>
+</section>
 
-<h2>Lokal gespeicherte Daten</h2>
-<p>Einstellungen (z. B. Standard-Suchradius, Kraftstoffsorte, Benachrichtigungsoptionen) sowie ein
-temporärer Zwischenspeicher zuletzt abgerufener Tankstellendaten werden ausschließlich lokal auf deinem
-Gerät gespeichert und nicht an Dritte übertragen.</p>
+<section>
+  <div class="wrap">
+    <h2>Woher die Daten kommen</h2>
+    <p class="sources">Kraftstoffpreise für Deutschland von Tankerkönig (MTS-K, CC BY 4.0), für
+    Italien vom MIMIT (IODL 2.0), für Mexiko von der CRE (CC BY 4.0), für Großbritannien von Fuel
+    Finder (Open Government Licence v3.0), für Luxemburg amtliche Höchstpreise mit Standorten
+    © OpenStreetMap-Mitwirkende (ODbL), weitere von offiziellen Regierungsportalen. Ladepunkte von
+    Open Charge Map.</p>
+  </div>
+</section>
 
-<h2>Drittanbieter-Dienste</h2>
-<p>Zur Anzeige von Karten, zur Routenberechnung sowie zum Abruf von Tankstellen-, Ladepunkt- und Preisdaten
-verbindet sich die App mit folgenden Diensten. Für deren Verarbeitung gelten die jeweils eigenen
-Datenschutzbestimmungen:</p>
-<ul>
-  <li><strong>Apple Maps / MapKit</strong> (Karten, Geokodierung, Routen, Adresssuche) –
-      <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></li>
-  <li><strong>Tankerkönig</strong> (Kraftstoffpreise Deutschland, Daten: MTS-K, CC BY 4.0) –
-      <a href="https://creativecommons.tankerkoenig.de">creativecommons.tankerkoenig.de</a></li>
-  <li><strong>E-Control</strong> (Kraftstoffpreise Österreich)</li>
-  <li><strong>data.economie.gouv.fr</strong> (Kraftstoffpreise Frankreich)</li>
-  <li><strong>Geoportal Gasolineras</strong>, Ministerio para la Transición Ecológica (Kraftstoffpreise Spanien)</li>
-  <li><strong>DGEG</strong> (Kraftstoffpreise Portugal)</li>
-  <li><strong>MIMIT</strong> (Kraftstoffpreise Italien)</li>
-  <li><strong>petrol.lu</strong> und <strong>OpenStreetMap / Overpass API</strong> (Preise und Standorte Luxemburg)</li>
-  <li><strong>CRE</strong> (Kraftstoffpreise Mexiko)</li>
-  <li><strong>Fuel Finder</strong> (Kraftstoffpreise Vereinigtes Königreich) – abgerufen über einen vom
-      App-Anbieter betriebenen Vermittlungsserver bei Amazon Web Services (Region London), siehe unten</li>
-  <li><strong>Open Charge Map</strong> und <strong>GoingElectric</strong> (Ladepunkte/Strom)</li>
-</ul>
-<p>Übermittelt werden nur die für die Abfrage nötigen Angaben (Standortkoordinaten bzw. Region und
-Suchradius), keine personenbezogenen Kennungen. Für Italien, Luxemburg und Mexiko lädt die App Gesamtlisten
-und filtert sie auf dem Gerät – dort wird kein Standort übermittelt. Wie bei jeder Internetverbindung
-erhalten die angefragten Server technisch bedingt deine IP-Adresse.</p>
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="privacy.html">Datenschutz</a>
+      <a href="support.html">Support &amp; Hilfe</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="mailto:support@nrg-app.com">support@nrg-app.com</a>
+    </div>
+    <p>NRG wird von Christian Honey entwickelt. Apple, App Store, CarPlay, Google Play und
+    OpenStreetMap sind Marken der jeweiligen Inhaber.</p>
+  </div>
+</footer>
 
-<h2>Vermittlungsserver für das Vereinigte Königreich</h2>
-<p>Für Preise im Vereinigten Königreich sendet die App Koordinaten und Suchradius an einen vom App-Anbieter
-betriebenen Server bei Amazon Web Services (Region eu-west-2, London). Dieser ruft die Daten bei Fuel Finder
-ab und gibt nur die Tankstellen in der Nähe zurück. Der Server speichert weder deinen Standort noch deine
-IP-Adresse; AWS verarbeitet Verbindungsdaten nur technisch bedingt zur Bereitstellung des Dienstes
-(<a href="https://aws.amazon.com/privacy/">aws.amazon.com/privacy</a>). Dieser Server wird nur bei Standorten
-im Vereinigten Königreich angefragt.</p>
-
-<h2>Bewertungsanfrage</h2>
-<p>Die App kann über die Apple-Standardfunktion gelegentlich um eine Bewertung bitten. Dabei werden keine
-Daten an den App-Anbieter übertragen.</p>
-
-<h2>Keine Weitergabe / kein Verkauf</h2>
-<p>Es werden keine Daten verkauft oder zu Werbe- bzw. Tracking-Zwecken weitergegeben.</p>
-
-<h2>Kinder</h2>
-<p>Die App richtet sich nicht gezielt an Kinder und erfasst wissentlich keine Daten von Kindern.</p>
-
-<h2>Änderungen</h2>
-<p>Diese Richtlinie kann bei Bedarf aktualisiert werden. Änderungen werden auf dieser Seite mit neuem
-Datum veröffentlicht.</p>
-
-<h2>Kontakt</h2>
-<p>Bei Fragen zum Datenschutz: <a href="mailto:christian.honey@gmail.com">christian.honey@gmail.com</a></p>
 </body>
 </html>
