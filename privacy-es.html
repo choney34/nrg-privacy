@@ -27,7 +27,7 @@
 <a href="privacy-it.html">Italiano</a> · <strong>Español</strong> · <a href="privacy-pt.html">Português</a></p>
 
 <h1>Política de privacidad de NRG</h1>
-<p class="muted">Última actualización: 15 de septiembre de 2026</p>
+<p class="muted">Última actualización: 4 de octubre de 2026</p>
 
 <p>Esta política de privacidad describe cómo la app <strong>NRG</strong> («la app», bundle ID
 <code>dev.christianhoney.nrg</code>) trata tus datos. El responsable es Christian Honey
@@ -78,16 +78,20 @@ conecta a los siguientes servicios. A su tratamiento se aplican sus propias pol�
   <li><strong>data.economie.gouv.fr</strong> (precios de combustible Francia)</li>
   <li><strong>Geoportal Gasolineras</strong>, Ministerio para la Transición Ecológica (precios de combustible España)</li>
   <li><strong>DGEG</strong> (precios de combustible Portugal)</li>
-  <li><strong>MIMIT</strong> (precios de combustible Italia)</li>
+  <li><strong>MIMIT</strong> (precios de combustible Italia: archivo diario y precios en tiempo real del portal <strong>Osservaprezzi carburanti</strong>)</li>
   <li><strong>petrol.lu</strong> y <strong>OpenStreetMap / Overpass API</strong> (precios y ubicaciones Luxemburgo)</li>
   <li><strong>CRE</strong> (precios de combustible México)</li>
   <li><strong>Fuel Finder</strong> (precios de combustible Reino Unido) – obtenidos a través de un servidor
       intermediario operado por el proveedor de la app en Amazon Web Services (región de Londres), ver más abajo</li>
-  <li><strong>Open Charge Map</strong> y <strong>GoingElectric</strong> (puntos de recarga)</li>
+  <li><strong>Open Charge Map</strong> (puntos de recarga)</li>
+  <li><strong>GitHub Pages</strong> (GitHub, Inc.): archivos preparados por el proveedor de la app con servicios en las gasolineras (OpenStreetMap) y, como respaldo, datos oficiales de recarga</li>
+  <li><strong>Servidor NRG</strong> (api.nrg-app.com, operado por el proveedor de la app en netcup GmbH, Alemania): puntos de recarga, precios de recarga y disponibilidad de las fuentes oficiales de cada país, así como los precios de combustible de los países cuyos datos oficiales mantiene el servidor (actualmente Francia, España y Portugal). Para ello la app envía las coordenadas y el radio de búsqueda; el servidor no registra las solicitudes ni almacena la ubicación ni la dirección IP. Si no se puede acceder al servidor, la app consulta directamente las fuentes indicadas arriba</li>
 </ul>
 <p>Solo se transmite la información necesaria para la consulta (coordenadas o región y radio de búsqueda),
-sin identificadores personales. Para Italia, Luxemburgo y México la app descarga listas completas y las filtra
-en el dispositivo – en esos casos no se transmite ninguna ubicación. Como en cualquier conexión a Internet, los
+sin identificadores personales. Para Luxemburgo y México, y para los datos de servicios y recarga, la app descarga listas completas o archivos
+por país y los filtra en el dispositivo – en esos casos no se transmite ninguna ubicación. Para Italia la app
+carga además los precios en tiempo real del área de búsqueda; para ello se transmiten las coordenadas y el
+radio de búsqueda al portal Osservaprezzi. Como en cualquier conexión a Internet, los
 servidores consultados reciben por motivos técnicos tu dirección IP.</p>
 
 <h2>Servidor intermediario para el Reino Unido</h2>

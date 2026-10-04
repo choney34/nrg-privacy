@@ -27,7 +27,7 @@
 <a href="privacy-it.html">Italiano</a> · <a href="privacy-es.html">Español</a> · <strong>Português</strong></p>
 
 <h1>Política de privacidade da NRG</h1>
-<p class="muted">Última atualização: 15 de setembro de 2026</p>
+<p class="muted">Última atualização: 4 de outubro de 2026</p>
 
 <p>Esta política de privacidade descreve a forma como a app <strong>NRG</strong> («a app», bundle ID
 <code>dev.christianhoney.nrg</code>) trata os seus dados. O responsável é Christian Honey
@@ -80,16 +80,20 @@ privacidade:</p>
   <li><strong>data.economie.gouv.fr</strong> (preços de combustível França)</li>
   <li><strong>Geoportal Gasolineras</strong>, Ministerio para la Transición Ecológica (preços de combustível Espanha)</li>
   <li><strong>DGEG</strong> (preços de combustível Portugal)</li>
-  <li><strong>MIMIT</strong> (preços de combustível Itália)</li>
+  <li><strong>MIMIT</strong> (preços de combustível Itália: ficheiro diário e preços em tempo real do portal <strong>Osservaprezzi carburanti</strong>)</li>
   <li><strong>petrol.lu</strong> e <strong>OpenStreetMap / Overpass API</strong> (preços e localizações Luxemburgo)</li>
   <li><strong>CRE</strong> (preços de combustível México)</li>
   <li><strong>Fuel Finder</strong> (preços de combustível Reino Unido) – obtidos através de um servidor
       intermediário operado pelo fornecedor da app na Amazon Web Services (região de Londres), ver abaixo</li>
-  <li><strong>Open Charge Map</strong> e <strong>GoingElectric</strong> (pontos de carregamento)</li>
+  <li><strong>Open Charge Map</strong> (pontos de carregamento)</li>
+  <li><strong>GitHub Pages</strong> (GitHub, Inc.): ficheiros preparados pelo fornecedor da app com serviços nos postos (OpenStreetMap) e, como recurso, dados oficiais de carregamento</li>
+  <li><strong>Servidor NRG</strong> (api.nrg-app.com, operado pelo fornecedor da app na netcup GmbH, Alemanha): pontos de carregamento, preços de carregamento e disponibilidade das fontes oficiais de cada país, bem como os preços de combustível dos países cujos dados oficiais o servidor mantém (atualmente França, Espanha e Portugal). Para isso a app envia as coordenadas e o raio de pesquisa; o servidor não regista os pedidos nem guarda a localização ou o endereço IP. Se o servidor não estiver acessível, a app consulta diretamente as fontes acima indicadas</li>
 </ul>
 <p>Apenas são transmitidas as informações necessárias ao pedido (coordenadas ou região e raio de pesquisa),
-sem identificadores pessoais. Para Itália, Luxemburgo e México a app descarrega listas completas e filtra-as
-no dispositivo – nesses casos não é transmitida qualquer localização. Como em qualquer ligação à Internet, os
+sem identificadores pessoais. Para Luxemburgo e México, e para os dados de serviços e carregamento, a app descarrega listas completas ou
+ficheiros por país e filtra-os no dispositivo – nesses casos não é transmitida qualquer localização. Para Itália
+a app carrega ainda os preços em tempo real da área de pesquisa; para isso, as coordenadas e o raio de pesquisa
+são transmitidos ao portal Osservaprezzi. Como em qualquer ligação à Internet, os
 servidores contactados recebem, por razões técnicas, o seu endereço IP.</p>
 
 <h2>Servidor intermediário para o Reino Unido</h2>

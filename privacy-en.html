@@ -27,7 +27,7 @@
 <a href="privacy-it.html">Italiano</a> · <a href="privacy-es.html">Español</a> · <a href="privacy-pt.html">Português</a></p>
 
 <h1>Privacy Policy for NRG</h1>
-<p class="muted">Last updated: September 15, 2026</p>
+<p class="muted">Last updated: October 4, 2026</p>
 
 <p>This privacy policy describes how the app <strong>NRG</strong> ("the app", bundle ID
 <code>dev.christianhoney.nrg</code>) handles your data. The controller is Christian Honey
@@ -77,16 +77,19 @@ connects to the following services. Their own privacy policies apply to their pr
   <li><strong>data.economie.gouv.fr</strong> (fuel prices France)</li>
   <li><strong>Geoportal Gasolineras</strong>, Ministerio para la Transición Ecológica (fuel prices Spain)</li>
   <li><strong>DGEG</strong> (fuel prices Portugal)</li>
-  <li><strong>MIMIT</strong> (fuel prices Italy)</li>
+  <li><strong>MIMIT</strong> (fuel prices Italy: daily file and live prices from the <strong>Osservaprezzi carburanti</strong> portal)</li>
   <li><strong>petrol.lu</strong> and <strong>OpenStreetMap / Overpass API</strong> (prices and locations Luxembourg)</li>
   <li><strong>CRE</strong> (fuel prices Mexico)</li>
   <li><strong>Fuel Finder</strong> (fuel prices United Kingdom) – retrieved via a relay server operated by the
       app provider on Amazon Web Services (London region), see below</li>
-  <li><strong>Open Charge Map</strong> and <strong>GoingElectric</strong> (charging points)</li>
+  <li><strong>Open Charge Map</strong> (charging points)</li>
+  <li><strong>GitHub Pages</strong> (GitHub, Inc.): files prepared by the app provider with services at fuel stations (OpenStreetMap) and, as a fallback, official charging data</li>
+  <li><strong>NRG server</strong> (api.nrg-app.com, operated by the app provider at netcup GmbH in Germany): charging points, charging prices and availability from the official sources of the respective countries, and fuel prices for the countries whose official data the server holds (currently France, Spain and Portugal). The app sends coordinates and search radius for this; the server does not log requests and stores neither location nor IP address. If the server cannot be reached, the app queries the sources listed above directly</li>
 </ul>
 <p>Only the information needed for the request is sent (location coordinates or region and search radius),
-no personal identifiers. For Italy, Luxembourg and Mexico the app downloads complete lists and filters them
-on the device – no location is sent there. As with any internet connection, the servers contacted
+no personal identifiers. For Luxembourg and Mexico, and for the service and charging data, the app downloads complete lists or
+country files and filters them on the device – no location is sent there. For Italy the app also loads live
+prices for the search area; for this, coordinates and search radius are sent to the Osservaprezzi portal. As with any internet connection, the servers contacted
 technically receive your IP address.</p>
 
 <h2>Relay server for the United Kingdom</h2>

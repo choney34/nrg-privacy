@@ -27,7 +27,7 @@
 <a href="privacy-it.html">Italiano</a> · <a href="privacy-es.html">Español</a> · <a href="privacy-pt.html">Português</a></p>
 
 <h1>Datenschutzrichtlinie für NRG</h1>
-<p class="muted">Stand: 15. September 2026</p>
+<p class="muted">Stand: 4. Oktober 2026</p>
 
 <p>Diese Datenschutzrichtlinie beschreibt, wie die App <strong>NRG</strong> („die App", Bundle-ID
 <code>dev.christianhoney.nrg</code>) mit deinen Daten umgeht. Verantwortlich ist Christian Honey
@@ -79,16 +79,19 @@ Datenschutzbestimmungen:</p>
   <li><strong>data.economie.gouv.fr</strong> (Kraftstoffpreise Frankreich)</li>
   <li><strong>Geoportal Gasolineras</strong>, Ministerio para la Transición Ecológica (Kraftstoffpreise Spanien)</li>
   <li><strong>DGEG</strong> (Kraftstoffpreise Portugal)</li>
-  <li><strong>MIMIT</strong> (Kraftstoffpreise Italien)</li>
+  <li><strong>MIMIT</strong> (Kraftstoffpreise Italien: Tagesdatei sowie Live-Preise des Portals <strong>Osservaprezzi carburanti</strong>)</li>
   <li><strong>petrol.lu</strong> und <strong>OpenStreetMap / Overpass API</strong> (Preise und Standorte Luxemburg)</li>
   <li><strong>CRE</strong> (Kraftstoffpreise Mexiko)</li>
   <li><strong>Fuel Finder</strong> (Kraftstoffpreise Vereinigtes Königreich) – abgerufen über einen vom
       App-Anbieter betriebenen Vermittlungsserver bei Amazon Web Services (Region London), siehe unten</li>
-  <li><strong>Open Charge Map</strong> und <strong>GoingElectric</strong> (Ladepunkte/Strom)</li>
+  <li><strong>Open Charge Map</strong> (Ladepunkte/Strom)</li>
+  <li><strong>GitHub Pages</strong> (GitHub, Inc.): vom App-Anbieter aufbereitete Dateien mit Services an Tankstellen (OpenStreetMap) und, als Rückfallebene, amtlichen Ladedaten</li>
+  <li><strong>NRG-Server</strong> (api.nrg-app.com, betrieben vom App-Anbieter bei der netcup GmbH in Deutschland): Ladepunkte, Ladepreise und Belegung aus amtlichen Quellen der jeweiligen Länder sowie Kraftstoffpreise für die Länder, deren amtliche Daten der Server bereithält (derzeit Frankreich, Spanien und Portugal). Die App sendet dafür Koordinaten und Suchradius; der Server protokolliert keine Anfragen und speichert weder Standort noch IP-Adresse. Ist der Server nicht erreichbar, fragt die App die oben genannten Quellen direkt ab</li>
 </ul>
 <p>Übermittelt werden nur die für die Abfrage nötigen Angaben (Standortkoordinaten bzw. Region und
-Suchradius), keine personenbezogenen Kennungen. Für Italien, Luxemburg und Mexiko lädt die App Gesamtlisten
-und filtert sie auf dem Gerät – dort wird kein Standort übermittelt. Wie bei jeder Internetverbindung
+Suchradius), keine personenbezogenen Kennungen. Für Luxemburg und Mexiko sowie für die Service- und Ladedaten lädt die App Gesamtlisten bzw. Länderdateien
+und filtert sie auf dem Gerät – dort wird kein Standort übermittelt. Für Italien lädt die App zusätzlich die
+Live-Preise für den Suchbereich; dafür werden Koordinaten und Suchradius an das Portal Osservaprezzi übermittelt. Wie bei jeder Internetverbindung
 erhalten die angefragten Server technisch bedingt deine IP-Adresse.</p>
 
 <h2>Vermittlungsserver für das Vereinigte Königreich</h2>

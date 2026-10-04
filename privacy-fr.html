@@ -27,7 +27,7 @@
 <a href="privacy-it.html">Italiano</a> · <a href="privacy-es.html">Español</a> · <a href="privacy-pt.html">Português</a></p>
 
 <h1>Politique de confidentialité de NRG</h1>
-<p class="muted">Dernière mise à jour : 15 septembre 2026</p>
+<p class="muted">Dernière mise à jour : 4 octobre 2026</p>
 
 <p>La présente politique de confidentialité décrit la manière dont l'application <strong>NRG</strong>
 (« l'app », identifiant <code>dev.christianhoney.nrg</code>) traite vos données. Le responsable est
@@ -79,16 +79,20 @@ prix, l'app se connecte aux services suivants. Leurs propres politiques de confi
   <li><strong>data.economie.gouv.fr</strong> (prix des carburants France)</li>
   <li><strong>Geoportal Gasolineras</strong>, Ministerio para la Transición Ecológica (prix des carburants Espagne)</li>
   <li><strong>DGEG</strong> (prix des carburants Portugal)</li>
-  <li><strong>MIMIT</strong> (prix des carburants Italie)</li>
+  <li><strong>MIMIT</strong> (prix des carburants Italie : fichier quotidien et prix en direct du portail <strong>Osservaprezzi carburanti</strong>)</li>
   <li><strong>petrol.lu</strong> et <strong>OpenStreetMap / Overpass API</strong> (prix et emplacements Luxembourg)</li>
   <li><strong>CRE</strong> (prix des carburants Mexique)</li>
   <li><strong>Fuel Finder</strong> (prix des carburants Royaume-Uni) – récupérés via un serveur relais exploité
       par l'éditeur de l'app sur Amazon Web Services (région de Londres), voir ci-dessous</li>
-  <li><strong>Open Charge Map</strong> et <strong>GoingElectric</strong> (bornes de recharge)</li>
+  <li><strong>Open Charge Map</strong> (bornes de recharge)</li>
+  <li><strong>GitHub Pages</strong> (GitHub, Inc.) : fichiers préparés par le fournisseur de l'app avec les services aux stations (OpenStreetMap) et, en solution de secours, les données officielles de recharge</li>
+  <li><strong>Serveur NRG</strong> (api.nrg-app.com, exploité par le fournisseur de l'app chez netcup GmbH en Allemagne) : bornes, tarifs de recharge et disponibilité issus des sources officielles des pays concernés, ainsi que les prix des carburants pour les pays dont le serveur détient les données officielles (actuellement la France, l'Espagne et le Portugal). L'app envoie pour cela les coordonnées et le rayon de recherche ; le serveur ne journalise pas les requêtes et n'enregistre ni la position ni l'adresse IP. Si le serveur est injoignable, l'app interroge directement les sources citées ci-dessus</li>
 </ul>
 <p>Seules les informations nécessaires à la requête sont transmises (coordonnées ou région et rayon de
-recherche), sans identifiant personnel. Pour l'Italie, le Luxembourg et le Mexique, l'app télécharge des
-listes complètes et les filtre sur l'appareil – aucune position n'y est transmise. Comme pour toute connexion
+recherche), sans identifiant personnel. Pour le Luxembourg et le Mexique, ainsi que pour les données de services et de recharge, l'app télécharge des
+listes complètes ou des fichiers par pays et les filtre sur l'appareil – aucune position n'y est transmise. Pour
+l'Italie, l'app charge en plus les prix en direct de la zone de recherche ; les coordonnées et le rayon de
+recherche sont alors transmis au portail Osservaprezzi. Comme pour toute connexion
 Internet, les serveurs contactés reçoivent techniquement votre adresse IP.</p>
 
 <h2>Serveur relais pour le Royaume-Uni</h2>
