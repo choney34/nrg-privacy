@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NRG – Combustível barato na Europa</title>
+<title>NRG: Combustível e carga</title>
 <meta name="description" content="A NRG encontra os postos de combustível e pontos de carregamento mais baratos, perto de si e ao longo da sua rota. Preços em direto de fontes oficiais em nove países.">
 <link rel="icon" href="img/icon.png">
-<meta property="og:title" content="NRG – Combustível barato na Europa">
+<meta property="og:title" content="NRG: Combustível e carga">
 <meta property="og:description" content="Preços de combustível em direto: abasteça barato, perto de si e na sua rota.">
 <meta property="og:image" content="https://nrg-app.com/img/icon.png">
 <meta property="og:url" content="https://nrg-app.com/pt.html">
@@ -71,9 +71,14 @@
   .shots{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin:-34px auto 0;
     padding-bottom:10px;position:relative;z-index:2}
   .shots figure{margin:0;width:250px}
-  .shots img{width:100%;border-radius:18px;border:1px solid var(--line);
+  .shots img{width:100%;height:auto;border-radius:18px;border:1px solid var(--line);
     box-shadow:0 22px 50px rgba(0,0,0,.5);display:block}
   .shots figcaption{color:var(--muted);font-size:.88rem;text-align:center;margin-top:12px}
+  @media (max-width:860px){
+    .shots{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;
+      gap:16px;padding:0 22px 14px;-webkit-overflow-scrolling:touch}
+    .shots figure{flex:0 0 62%;max-width:250px;scroll-snap-align:center}
+  }
 
   /* Abschnitte */
   section{padding:66px 0}
@@ -92,6 +97,8 @@
   .chip{background:var(--card);border:1px solid var(--line);border-radius:999px;
     padding:8px 15px;font-size:.94rem}
   .sources{color:var(--muted);font-size:.93rem;max-width:840px}
+  .cover{color:var(--muted);font-size:.96rem;max-width:840px;margin:0 0 18px;padding-left:20px}
+  .cover li{margin:4px 0}
 
   footer{border-top:1px solid var(--line);padding:34px 0 46px;color:var(--muted);font-size:.92rem}
   footer .links{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:12px}
@@ -118,7 +125,7 @@
   <div class="wrap">
     <img class="icon" src="img/icon.png" alt="NRG">
     <h1>Nunca mais pague demais para abastecer</h1>
-    <p class="tagline">Combustível barato na Europa</p>
+    <p class="tagline">Preços sem fronteiras, ao vivo</p>
     <p class="lead">A NRG mostra-lhe os postos de combustível e pontos de carregamento mais baratos, perto de si e ao longo da sua rota. Com preços em direto de fontes oficiais em nove países.</p>
     <div class="cta">
       <a class="btn" href="https://apps.apple.com/app/id6774231622">
@@ -136,16 +143,28 @@
 
 <div class="shots wrap">
   <figure>
-    <img src="img/shot-nearby-pt.png" alt="Mapa com postos e preços nas proximidades">
-    <figcaption>Os preços diretamente no mapa</figcaption>
+    <img src="img/shot-umkreis-pt.jpg" alt="Os postos mais baratos num relance" loading="lazy" width="390" height="848">
+    <figcaption>Os postos mais baratos num relance</figcaption>
   </figure>
   <figure>
-    <img src="img/shot-route.png" alt="Rota com postos ao longo do caminho">
-    <figcaption>Postos ao longo da rota</figcaption>
+    <img src="img/shot-filter-pt.jpg" alt="Filtre: abertos, preços recentes, loja ou WC" loading="lazy" width="390" height="848">
+    <figcaption>Filtre: abertos, preços recentes, loja ou WC</figcaption>
   </figure>
   <figure>
-    <img src="img/shot-alerts.png" alt="Ative os alertas – a NRG informa sobre alterações de preço perto de si e postos baratos durante a condução">
-    <figcaption>Aviso de novo preço mínimo</figcaption>
+    <img src="img/shot-laden-pt.jpg" alt="Preços de carregamento e pontos livres em tempo real" loading="lazy" width="390" height="848">
+    <figcaption>Preços de carregamento e pontos livres em tempo real</figcaption>
+  </figure>
+  <figure>
+    <img src="img/shot-favoriten-pt.jpg" alt="Os seus favoritos – todos os preços num mapa" loading="lazy" width="390" height="848">
+    <figcaption>Os seus favoritos – todos os preços num mapa</figcaption>
+  </figure>
+  <figure>
+    <img src="img/shot-alarm-pt.jpg" alt="Alerta assim que o preço desce" loading="lazy" width="390" height="848">
+    <figcaption>Alerta assim que o preço desce</figcaption>
+  </figure>
+  <figure>
+    <img src="img/shot-route-pt.jpg" alt="Abasteça mais barato na sua rota" loading="lazy" width="390" height="848">
+    <figcaption>Abasteça mais barato na sua rota</figcaption>
   </figure>
 </div>
 
@@ -163,6 +182,21 @@
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 19l6-14 4 9 6-4"/></svg></div>
         <h3>Planear uma rota</h3>
         <p>Introduza partida e destino e veja cada posto ao longo do caminho. A distância máxima à rota é escolhida por si.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg></div>
+        <h3>Filtros</h3>
+        <p>Só abertos, preço máximo, atualidade do preço, serviços como WC, loja ou lavagem.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z"/></svg></div>
+        <h3>Favoritos</h3>
+        <p>Marque os seus postos, filtre com um toque ou mostre-os todos juntos.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 01-12 0zM12 17v5"/></svg></div>
+        <h3>Carregamento</h3>
+        <p>Preços oficiais, pontos livres, potência, tipo de ficha e operador.</p>
       </div>
       <div class="card">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9z"/><path d="M10 21h4"/></svg></div>
@@ -206,7 +240,24 @@
   </div>
 </section>
 
-<section>
+<section id="laden">
+  <div class="wrap">
+    <h2>Preços de carregamento e disponibilidade</h2>
+    <p class="sub">A NRG mostra pontos de carregamento em toda a Europa. Os preços e os pontos livres estão disponíveis onde os operadores os comunicam às autoridades. A cobertura varia muito de país para país e de zona para zona e vai sendo alargada (outubro de 2026, a nível nacional).</p>
+    <ul class="cover">
+      <li>Áustria e Lituânia: preços para quase todos os locais</li>
+      <li>Países Baixos e Polónia: preços para mais de 80 %, disponibilidade para todos</li>
+      <li>Alemanha: preços e disponibilidade para cerca de metade</li>
+      <li>Finlândia: preços para cerca de 40 %, disponibilidade para quase todos</li>
+      <li>França: preços apenas de alguns operadores regionais (cerca de 15 %), disponibilidade para pouco mais de um terço</li>
+      <li>Luxemburgo: disponibilidade, sem preços</li>
+      <li>Espanha: apenas localizações</li>
+    </ul>
+    <p class="sources">Em algumas cidades a cobertura pode ser muito inferior: em Paris e Amesterdão, por exemplo, os grandes operadores ainda não comunicam preços ou comunicam muito poucos. Nos restantes países a NRG mostra os pontos de carregamento sem preço nem disponibilidade. Acrescentamos novas fontes assim que ficam disponíveis.</p>
+  </div>
+</section>
+
+<section class="alt">
   <div class="wrap">
     <h2>De onde vêm os dados</h2>
     <p class="sources">Preços de combustível para a Alemanha pela Tankerkönig (MTS-K, CC BY 4.0), para a Itália pelo MIMIT (IODL 2.0), para o México pela CRE (CC BY 4.0), para o Reino Unido pelo Fuel Finder (Open Government Licence v3.0), para o Luxemburgo preços máximos oficiais com localizações © contribuidores do OpenStreetMap (ODbL), os restantes por portais governamentais oficiais. Dados de carregamento: Mobilithek e Bundesnetzagentur (Alemanha, CC BY 4.0), E-Control (Áustria, CC BY 4.0), NDW (Países Baixos), Fintraffic / digitraffic.fi (Finlândia, CC BY 4.0), EIPA/UDT (Polónia), data.gouv.fr (França, Licence Ouverte 2.0), Chargy / data.public.lu (Luxemburgo, CC0), Via Lietuva (Lituânia, CC BY 4.0), DGT (Espanha, CC BY), nos restantes Open Charge Map. Serviços: © contribuidores do OpenStreetMap (ODbL).</p>

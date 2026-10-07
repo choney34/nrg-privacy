@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NRG – Günstig tanken in Europa</title>
+<title>NRG – Günstig Tanken &amp; Laden</title>
 <meta name="description" content="NRG findet die günstigsten Tankstellen und Ladepunkte – in deiner Nähe und entlang deiner Route. Live-Preise aus offiziellen Quellen in neun Ländern.">
 <link rel="icon" href="img/icon.png">
-<meta property="og:title" content="NRG – Günstig tanken in Europa">
+<meta property="og:title" content="NRG – Günstig Tanken &amp; Laden">
 <meta property="og:description" content="Live-Spritpreise: günstig tanken und laden, in der Nähe und entlang der Route.">
 <meta property="og:image" content="https://nrg-app.com/img/icon.png">
 <meta property="og:url" content="https://nrg-app.com/">
@@ -71,9 +71,14 @@
   .shots{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin:-34px auto 0;
     padding-bottom:10px;position:relative;z-index:2}
   .shots figure{margin:0;width:250px}
-  .shots img{width:100%;border-radius:18px;border:1px solid var(--line);
+  .shots img{width:100%;height:auto;border-radius:18px;border:1px solid var(--line);
     box-shadow:0 22px 50px rgba(0,0,0,.5);display:block}
   .shots figcaption{color:var(--muted);font-size:.88rem;text-align:center;margin-top:12px}
+  @media (max-width:860px){
+    .shots{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;
+      gap:16px;padding:0 22px 14px;-webkit-overflow-scrolling:touch}
+    .shots figure{flex:0 0 62%;max-width:250px;scroll-snap-align:center}
+  }
 
   /* Abschnitte */
   section{padding:66px 0}
@@ -92,6 +97,8 @@
   .chip{background:var(--card);border:1px solid var(--line);border-radius:999px;
     padding:8px 15px;font-size:.94rem}
   .sources{color:var(--muted);font-size:.93rem;max-width:840px}
+  .cover{color:var(--muted);font-size:.96rem;max-width:840px;margin:0 0 18px;padding-left:20px}
+  .cover li{margin:4px 0}
 
   footer{border-top:1px solid var(--line);padding:34px 0 46px;color:var(--muted);font-size:.92rem}
   footer .links{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:12px}
@@ -118,7 +125,7 @@
   <div class="wrap">
     <img class="icon" src="img/icon.png" alt="NRG App-Symbol">
     <h1>Nie wieder zu teuer tanken</h1>
-    <p class="tagline">Günstig tanken in Europa</p>
+    <p class="tagline">Sprit- &amp; Ladepreise grenzenlos</p>
     <p class="lead">NRG zeigt dir die günstigsten Tankstellen und Ladepunkte – in deiner Umgebung
     und entlang deiner Route. Mit Live-Preisen aus offiziellen Quellen in neun Ländern.</p>
     <div class="cta">
@@ -137,16 +144,28 @@
 
 <div class="shots wrap">
   <figure>
-    <img src="img/shot-nearby-de.png" alt="Karte mit Tankstellen und Preisen in der Umgebung">
-    <figcaption>Preise direkt auf der Karte</figcaption>
+    <img src="img/shot-umkreis-de.jpg" alt="Die günstigsten Tankstellen auf einen Blick" loading="lazy" width="390" height="848">
+    <figcaption>Die günstigsten Tankstellen auf einen Blick</figcaption>
   </figure>
   <figure>
-    <img src="img/shot-route.png" alt="Route mit Tankstellen entlang des Wegs">
-    <figcaption>Tankstellen entlang der Route</figcaption>
+    <img src="img/shot-filter-de.jpg" alt="Filtern: geöffnet, aktuell, mit Shop oder WC" loading="lazy" width="390" height="848">
+    <figcaption>Filtern: geöffnet, aktuell, mit Shop oder WC</figcaption>
   </figure>
   <figure>
-    <img src="img/shot-alerts.png" alt="Benachrichtigungen einschalten – NRG meldet Preisänderungen im Umkreis und günstige Stationen während der Fahrt">
-    <figcaption>Hinweise bei neuem Tiefstpreis</figcaption>
+    <img src="img/shot-laden-de.jpg" alt="Ladepreise und freie Ladepunkte in Echtzeit" loading="lazy" width="390" height="848">
+    <figcaption>Ladepreise und freie Ladepunkte in Echtzeit</figcaption>
+  </figure>
+  <figure>
+    <img src="img/shot-favoriten-de.jpg" alt="Deine Favoriten – alle Preise auf einer Karte" loading="lazy" width="390" height="848">
+    <figcaption>Deine Favoriten – alle Preise auf einer Karte</figcaption>
+  </figure>
+  <figure>
+    <img src="img/shot-alarm-de.jpg" alt="Preis-Alarm, sobald es billiger wird" loading="lazy" width="390" height="848">
+    <figcaption>Preis-Alarm, sobald es billiger wird</figcaption>
+  </figure>
+  <figure>
+    <img src="img/shot-route-de.jpg" alt="Günstig tanken entlang deiner Route" loading="lazy" width="390" height="848">
+    <figcaption>Günstig tanken entlang deiner Route</figcaption>
   </figure>
 </div>
 
@@ -165,6 +184,21 @@
         <h3>Route planen</h3>
         <p>Start und Ziel eingeben und jede Station entlang des Wegs sehen. Wie weit sie abseits
         liegen darf, bestimmst du selbst.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg></div>
+        <h3>Filter</h3>
+        <p>Nur geöffnet, Preisobergrenze, Aktualität der Preise, Services wie WC, Shop oder Waschanlage.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z"/></svg></div>
+        <h3>Favoriten</h3>
+        <p>Lieblingstankstellen markieren, mit einem Tipp filtern oder alle gemeinsam anzeigen.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 01-12 0zM12 17v5"/></svg></div>
+        <h3>Laden</h3>
+        <p>Amtliche Preise, freie Ladepunkte, Ladeleistung, Steckertyp und Anbieter.</p>
       </div>
       <div class="card">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9z"/><path d="M10 21h4"/></svg></div>
@@ -208,7 +242,24 @@
   </div>
 </section>
 
-<section>
+<section id="laden">
+  <div class="wrap">
+    <h2>Ladepreise und Belegung</h2>
+    <p class="sub">Ladepunkte zeigt NRG europaweit. Preise und freie Ladepunkte gibt es dort, wo Betreiber sie an amtliche Stellen melden. Die Abdeckung ist je Land und Region sehr unterschiedlich und wird laufend ausgebaut (Stand Oktober 2026, landesweit).</p>
+    <ul class="cover">
+      <li>Österreich und Litauen: Preise für fast alle Standorte</li>
+      <li>Niederlande und Polen: Preise für über 80 %, Belegung für alle</li>
+      <li>Deutschland: Preise und Belegung für rund die Hälfte</li>
+      <li>Finnland: Preise für rund 40 %, Belegung für fast alle</li>
+      <li>Frankreich: Preise nur bei einzelnen regionalen Betreibern (rund 15 %), Belegung für gut ein Drittel</li>
+      <li>Luxemburg: Belegung, keine Preise</li>
+      <li>Spanien: nur Standorte</li>
+    </ul>
+    <p class="sources">In einzelnen Städten kann die Abdeckung deutlich niedriger sein: In Paris und Amsterdam zum Beispiel melden die großen Betreiber bisher keine oder nur wenige Preise. In allen anderen Ländern zeigt NRG Ladepunkte ohne Preis und Belegung. Wir binden weitere Quellen an, sobald sie verfügbar sind.</p>
+  </div>
+</section>
+
+<section class="alt">
   <div class="wrap">
     <h2>Woher die Daten kommen</h2>
     <p class="sources">Kraftstoffpreise für Deutschland von Tankerkönig (MTS-K, CC BY 4.0), für

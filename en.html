@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NRG – Cheap fuel across Europe</title>
+<title>NRG – Cheap Fuel &amp; EV Charging</title>
 <meta name="description" content="NRG finds the cheapest fuel and charging stations — near you and along your route. Live prices from official sources in nine countries.">
 <link rel="icon" href="img/icon.png">
-<meta property="og:title" content="NRG – Cheap fuel across Europe">
+<meta property="og:title" content="NRG – Cheap Fuel &amp; EV Charging">
 <meta property="og:description" content="Live fuel prices: find the cheapest station near you and along your route.">
 <meta property="og:image" content="https://nrg-app.com/img/icon.png">
 <meta property="og:url" content="https://nrg-app.com/en.html">
@@ -71,9 +71,14 @@
   .shots{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin:-34px auto 0;
     padding-bottom:10px;position:relative;z-index:2}
   .shots figure{margin:0;width:250px}
-  .shots img{width:100%;border-radius:18px;border:1px solid var(--line);
+  .shots img{width:100%;height:auto;border-radius:18px;border:1px solid var(--line);
     box-shadow:0 22px 50px rgba(0,0,0,.5);display:block}
   .shots figcaption{color:var(--muted);font-size:.88rem;text-align:center;margin-top:12px}
+  @media (max-width:860px){
+    .shots{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;
+      gap:16px;padding:0 22px 14px;-webkit-overflow-scrolling:touch}
+    .shots figure{flex:0 0 62%;max-width:250px;scroll-snap-align:center}
+  }
 
   /* Abschnitte */
   section{padding:66px 0}
@@ -92,6 +97,8 @@
   .chip{background:var(--card);border:1px solid var(--line);border-radius:999px;
     padding:8px 15px;font-size:.94rem}
   .sources{color:var(--muted);font-size:.93rem;max-width:840px}
+  .cover{color:var(--muted);font-size:.96rem;max-width:840px;margin:0 0 18px;padding-left:20px}
+  .cover li{margin:4px 0}
 
   footer{border-top:1px solid var(--line);padding:34px 0 46px;color:var(--muted);font-size:.92rem}
   footer .links{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:12px}
@@ -118,7 +125,7 @@
   <div class="wrap">
     <img class="icon" src="img/icon.png" alt="NRG app icon">
     <h1>Never overpay for fuel again</h1>
-    <p class="tagline">Cheap fuel across Europe</p>
+    <p class="tagline">Fuel &amp; charge prices, no limit</p>
     <p class="lead">NRG shows you the cheapest fuel and charging stations — near you and along
     your route, with live prices from official sources in nine countries.</p>
     <div class="cta">
@@ -137,16 +144,28 @@
 
 <div class="shots wrap">
   <figure>
-    <img src="img/shot-nearby-en.png" alt="Map showing nearby stations and prices">
-    <figcaption>Prices right on the map</figcaption>
+    <img src="img/shot-umkreis-en.jpg" alt="The cheapest stations at a glance" loading="lazy" width="390" height="848">
+    <figcaption>The cheapest stations at a glance</figcaption>
   </figure>
   <figure>
-    <img src="img/shot-route.png" alt="Route with stations along the way">
-    <figcaption>Stations along your route</figcaption>
+    <img src="img/shot-filter-en.jpg" alt="Filter: open now, fresh prices, shop or toilets" loading="lazy" width="390" height="848">
+    <figcaption>Filter: open now, fresh prices, shop or toilets</figcaption>
   </figure>
   <figure>
-    <img src="img/shot-alerts.png" alt="Turn on alerts – NRG reports price changes nearby and cheap stations while you drive">
-    <figcaption>Alerts on a new low price</figcaption>
+    <img src="img/shot-laden-en.jpg" alt="Charging prices and free chargers in real time" loading="lazy" width="390" height="848">
+    <figcaption>Charging prices and free chargers in real time</figcaption>
+  </figure>
+  <figure>
+    <img src="img/shot-favoriten-en.jpg" alt="Your favourites – all prices on one map" loading="lazy" width="390" height="848">
+    <figcaption>Your favourites – all prices on one map</figcaption>
+  </figure>
+  <figure>
+    <img src="img/shot-alarm-en.jpg" alt="Price alerts the moment it gets cheaper" loading="lazy" width="390" height="848">
+    <figcaption>Price alerts the moment it gets cheaper</figcaption>
+  </figure>
+  <figure>
+    <img src="img/shot-route-en.jpg" alt="Save on fuel along your route" loading="lazy" width="390" height="848">
+    <figcaption>Save on fuel along your route</figcaption>
   </figure>
 </div>
 
@@ -164,6 +183,21 @@
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 19l6-14 4 9 6-4"/></svg></div>
         <h3>Plan a route</h3>
         <p>Enter start and destination and see every station along the way. You decide how far off the route they may be.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg></div>
+        <h3>Filters</h3>
+        <p>Open now, maximum price, how recent the price is, amenities such as toilets, shop or car wash.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z"/></svg></div>
+        <h3>Favourites</h3>
+        <p>Mark your stations, filter with one tap or show them all together.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 01-12 0zM12 17v5"/></svg></div>
+        <h3>Charging</h3>
+        <p>Official prices, free charging points, power, connector type and operator.</p>
       </div>
       <div class="card">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9z"/><path d="M10 21h4"/></svg></div>
@@ -207,7 +241,24 @@
   </div>
 </section>
 
-<section>
+<section id="laden">
+  <div class="wrap">
+    <h2>Charging prices and availability</h2>
+    <p class="sub">NRG shows charging points across Europe. Prices and free charging points are available where operators report them to public authorities. Coverage differs a lot by country and region and is being expanded step by step (as of October 2026, nationwide).</p>
+    <ul class="cover">
+      <li>Austria and Lithuania: prices for almost all locations</li>
+      <li>Netherlands and Poland: prices for over 80%, availability for all</li>
+      <li>Germany: prices and availability for about half</li>
+      <li>Finland: prices for about 40%, availability for almost all</li>
+      <li>France: prices only from a few regional operators (about 15%), availability for just over a third</li>
+      <li>Luxembourg: availability, no prices</li>
+      <li>Spain: locations only</li>
+    </ul>
+    <p class="sources">In some cities coverage can be much lower: in Paris and Amsterdam, for example, the large operators report no or only a few prices so far. In all other countries NRG shows charging points without price and availability. We add further sources as soon as they become available.</p>
+  </div>
+</section>
+
+<section class="alt">
   <div class="wrap">
     <h2>Where the data comes from</h2>
     <p class="sources">Fuel prices for Germany by Tankerkönig (MTS-K, CC BY 4.0), for Italy by

@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NRG – Carburant pas cher en Europe</title>
+<title>NRG – Carburant &amp; recharge</title>
 <meta name="description" content="NRG trouve les stations-service et bornes de recharge les moins chères, à proximité et le long de votre itinéraire. Prix en direct de sources officielles dans neuf pays.">
 <link rel="icon" href="img/icon.png">
-<meta property="og:title" content="NRG – Carburant pas cher en Europe">
+<meta property="og:title" content="NRG – Carburant &amp; recharge">
 <meta property="og:description" content="Prix des carburants en direct : faites le plein au meilleur prix, autour de vous et sur votre route.">
 <meta property="og:image" content="https://nrg-app.com/img/icon.png">
 <meta property="og:url" content="https://nrg-app.com/fr.html">
@@ -71,9 +71,14 @@
   .shots{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin:-34px auto 0;
     padding-bottom:10px;position:relative;z-index:2}
   .shots figure{margin:0;width:250px}
-  .shots img{width:100%;border-radius:18px;border:1px solid var(--line);
+  .shots img{width:100%;height:auto;border-radius:18px;border:1px solid var(--line);
     box-shadow:0 22px 50px rgba(0,0,0,.5);display:block}
   .shots figcaption{color:var(--muted);font-size:.88rem;text-align:center;margin-top:12px}
+  @media (max-width:860px){
+    .shots{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;
+      gap:16px;padding:0 22px 14px;-webkit-overflow-scrolling:touch}
+    .shots figure{flex:0 0 62%;max-width:250px;scroll-snap-align:center}
+  }
 
   /* Abschnitte */
   section{padding:66px 0}
@@ -92,6 +97,8 @@
   .chip{background:var(--card);border:1px solid var(--line);border-radius:999px;
     padding:8px 15px;font-size:.94rem}
   .sources{color:var(--muted);font-size:.93rem;max-width:840px}
+  .cover{color:var(--muted);font-size:.96rem;max-width:840px;margin:0 0 18px;padding-left:20px}
+  .cover li{margin:4px 0}
 
   footer{border-top:1px solid var(--line);padding:34px 0 46px;color:var(--muted);font-size:.92rem}
   footer .links{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:12px}
@@ -118,7 +125,7 @@
   <div class="wrap">
     <img class="icon" src="img/icon.png" alt="NRG">
     <h1>Ne payez plus votre carburant trop cher</h1>
-    <p class="tagline">Carburant pas cher en Europe</p>
+    <p class="tagline">Prix en direct sans frontière</p>
     <p class="lead">NRG vous montre les stations-service et bornes de recharge les moins chères, autour de vous et le long de votre itinéraire. Avec des prix en direct issus de sources officielles dans neuf pays.</p>
     <div class="cta">
       <a class="btn" href="https://apps.apple.com/app/id6774231622">
@@ -136,16 +143,28 @@
 
 <div class="shots wrap">
   <figure>
-    <img src="img/shot-nearby-fr.png" alt="Carte avec les stations et les prix à proximité">
-    <figcaption>Les prix directement sur la carte</figcaption>
+    <img src="img/shot-umkreis-fr.jpg" alt="Les stations les moins chères en un coup d&#x27;œil" loading="lazy" width="390" height="848">
+    <figcaption>Les stations les moins chères en un coup d'œil</figcaption>
   </figure>
   <figure>
-    <img src="img/shot-route.png" alt="Itinéraire avec les stations le long du trajet">
-    <figcaption>Les stations le long de votre route</figcaption>
+    <img src="img/shot-filter-fr.jpg" alt="Filtrez : ouvert, prix récents, boutique ou toilettes" loading="lazy" width="390" height="848">
+    <figcaption>Filtrez : ouvert, prix récents, boutique ou toilettes</figcaption>
   </figure>
   <figure>
-    <img src="img/shot-alerts.png" alt="Activer les alertes – NRG signale les changements de prix autour de vous et les stations bon marché pendant la conduite">
-    <figcaption>Alerte en cas de nouveau prix bas</figcaption>
+    <img src="img/shot-laden-fr.jpg" alt="Prix de recharge et bornes libres en temps réel" loading="lazy" width="390" height="848">
+    <figcaption>Prix de recharge et bornes libres en temps réel</figcaption>
+  </figure>
+  <figure>
+    <img src="img/shot-favoriten-fr.jpg" alt="Vos favoris – tous les prix sur une carte" loading="lazy" width="390" height="848">
+    <figcaption>Vos favoris – tous les prix sur une carte</figcaption>
+  </figure>
+  <figure>
+    <img src="img/shot-alarm-fr.jpg" alt="Alerte dès que le prix baisse" loading="lazy" width="390" height="848">
+    <figcaption>Alerte dès que le prix baisse</figcaption>
+  </figure>
+  <figure>
+    <img src="img/shot-route-fr.jpg" alt="Faites le plein moins cher sur votre trajet" loading="lazy" width="390" height="848">
+    <figcaption>Faites le plein moins cher sur votre trajet</figcaption>
   </figure>
 </div>
 
@@ -163,6 +182,21 @@
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 19l6-14 4 9 6-4"/></svg></div>
         <h3>Planifier un itinéraire</h3>
         <p>Saisissez départ et destination et voyez chaque station sur le trajet. Vous décidez de l'écart maximal par rapport à la route.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg></div>
+        <h3>Filtres</h3>
+        <p>Stations ouvertes, prix maximal, fraîcheur des prix, services comme toilettes, boutique ou lavage.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z"/></svg></div>
+        <h3>Favoris</h3>
+        <p>Marquez vos stations, filtrez d'un geste ou affichez-les toutes ensemble.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 01-12 0zM12 17v5"/></svg></div>
+        <h3>Recharge</h3>
+        <p>Prix officiels, bornes libres, puissance, type de prise et opérateur.</p>
       </div>
       <div class="card">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9z"/><path d="M10 21h4"/></svg></div>
@@ -206,7 +240,24 @@
   </div>
 </section>
 
-<section>
+<section id="laden">
+  <div class="wrap">
+    <h2>Prix de recharge et disponibilité</h2>
+    <p class="sub">NRG affiche les bornes de recharge dans toute l'Europe. Les prix et les bornes libres sont disponibles là où les opérateurs les déclarent aux autorités. La couverture varie fortement selon le pays et la région et s'étend progressivement (octobre 2026, à l'échelle nationale).</p>
+    <ul class="cover">
+      <li>Autriche et Lituanie : prix pour presque tous les sites</li>
+      <li>Pays-Bas et Pologne : prix pour plus de 80 %, disponibilité pour tous</li>
+      <li>Allemagne : prix et disponibilité pour environ la moitié</li>
+      <li>Finlande : prix pour environ 40 %, disponibilité pour presque tous</li>
+      <li>France : prix seulement chez quelques opérateurs régionaux (environ 15 %), disponibilité pour un peu plus d'un tiers</li>
+      <li>Luxembourg : disponibilité, pas de prix</li>
+      <li>Espagne : emplacements uniquement</li>
+    </ul>
+    <p class="sources">Dans certaines villes, la couverture peut être nettement plus faible : à Paris et à Amsterdam, par exemple, les grands opérateurs ne déclarent pour l'instant aucun prix ou très peu. Dans tous les autres pays, NRG affiche les bornes sans prix ni disponibilité. Nous ajoutons de nouvelles sources dès qu'elles sont disponibles.</p>
+  </div>
+</section>
+
+<section class="alt">
   <div class="wrap">
     <h2>D'où viennent les données</h2>
     <p class="sources">Prix des carburants pour l'Allemagne par Tankerkönig (MTS-K, CC BY 4.0), pour l'Italie par le MIMIT (IODL 2.0), pour le Mexique par la CRE (CC BY 4.0), pour le Royaume-Uni par Fuel Finder (Open Government Licence v3.0), pour le Luxembourg prix maximaux officiels avec emplacements © contributeurs OpenStreetMap (ODbL), les autres par des portails gouvernementaux officiels. Données de recharge : Mobilithek et Bundesnetzagentur (Allemagne, CC BY 4.0), E-Control (Autriche, CC BY 4.0), NDW (Pays-Bas), Fintraffic / digitraffic.fi (Finlande, CC BY 4.0), EIPA/UDT (Pologne), data.gouv.fr (France, Licence Ouverte 2.0), Chargy / data.public.lu (Luxembourg, CC0), Via Lietuva (Lituanie, CC BY 4.0), DGT (Espagne, CC BY), ailleurs Open Charge Map. Services : © contributeurs OpenStreetMap (ODbL).</p>
